@@ -1,0 +1,20 @@
+
+<ng-container *ngIf="baseUrl === 'tasks'">
+    <nxlp-button color="green" text="Add Task" icon="add" (click)="addTask()"></nxlp-button>
+</ng-container>
+<div [ngClass]="{'hidden-md-down': position === 'top'}" style="display: 'flex'">
+    <ng-container *ngIf="baseUrl === 'task'">
+        <ng-container *ngIf="status !== 'complete' else goBack">
+            <nxlp-button color="clear" text="Edit" (click)="editTask()"></nxlp-button>
+            <nxlp-button color="green" text="Mark as Complete" (click)="completeTask()"></nxlp-button>
+        </ng-container>
+        <ng-template #goBack>
+            <nxlp-button color="clear" text="Back to Tasks" routerLink="/tasks"></nxlp-button>
+        </ng-template>
+    </ng-container>
+    <ng-container *ngIf="['edit', 'create'].includes(baseUrl)">
+        <nxlp-button color="clear" text="Cancel" routerLink="/tasks"></nxlp-button>
+        <nxlp-button color="red" text="Delete" (click)="deleteTask()"></nxlp-button>
+        <nxlp-button color="green" text="Save" (click)="updateTask()"></nxlp-button>
+    </ng-container>
+</div>

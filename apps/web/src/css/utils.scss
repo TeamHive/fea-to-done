@@ -1,0 +1,29 @@
+$font-size: (
+    lg: 16px,
+    md: 14px,
+    sm: 12px,
+    xs: 10px
+);
+
+$breakpoints: (
+    small: '480px',
+    medium : '768px',
+    large: '1024px',
+    x-large: '1280px'
+);
+
+.bg-color-purple {background: var(--color-purple);}
+.bg-color-orange {background: var(--color-orange);}
+.bg-color-blue {background: var(--color-blue);}
+.bg-color-green {background: var(--color-green);}
+
+.hidden-md-down {
+    @media (max-width: map-get($breakpoints, 'medium')) {
+        display: none !important;
+    }
+}
+.hidden-md-up {
+    @media (min-width: map-get($breakpoints, 'medium')) {
+        display: none !important;
+    }
+}

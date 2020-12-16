@@ -1,0 +1,48 @@
+@import '../../../css/utils.scss';
+
+header {
+  display: flex;
+  align-items: center;
+  background: var(--app-bg-color-secondary);
+  padding: 0 2em;
+  min-height: 70px;
+  font-family: 'Roboto Medium';
+
+  border-bottom: 1px solid var(--app-border-color);
+  margin-bottom: 1em;
+
+  @media (min-width: map-get($breakpoints, 'medium')) {
+    margin-bottom: 10vh;
+    justify-content: space-between;
+  }
+
+  @media (max-width: map-get($breakpoints, 'medium')) {
+    nxlp-nav {
+      justify-self: flex-end;
+    }
+  }
+  .app-title {
+    font-size: map-get($font-size, 'lg');
+    font-family: 'Roboto Medium';
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    tdn-ui-icon {
+      margin-right: 0.5em;
+      cursor: pointer;
+    }
+  }
+
+  .page-title {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Roboto Medium';
+  }
+
+  nxlp-nav {
+    display: flex;
+  }
+}

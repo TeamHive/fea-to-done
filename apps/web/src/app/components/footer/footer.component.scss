@@ -1,0 +1,40 @@
+@import '../../../css/utils.scss';
+
+footer {
+    display: flex;
+    align-items: center;
+    background: var(--app-bg-color-secondary);
+    padding: 0 2em;
+    min-height: 70px;
+    font-family: 'Roboto Medium';
+    border-top: 1px solid var(--app-border-color);
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 4em);
+    justify-content: flex-end;
+
+    .app-title {
+        font-size: map-get($font-size, 'lg');
+        font-family: 'Roboto Medium';
+      }
+    
+      & > div {
+        display: flex;
+        align-items: center;
+    
+        tdn-ui-icon {
+          margin-right: 0.5em;
+        }
+      }
+    
+      .page-title {
+        font-size: 20px;
+        line-height: 30px;
+        font-family: 'Roboto Medium';
+      }
+    
+      nxlp-nav {
+        display: flex;
+      }
+}
