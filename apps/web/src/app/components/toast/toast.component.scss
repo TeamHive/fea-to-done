@@ -1,0 +1,38 @@
+@import '../../../css/utils.scss';
+
+.toast {
+    height: 0;
+    max-height: 0;
+    opacity: 0;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: 'Roboto Medium';
+    font-size: 16px;
+    position: fixed;
+    top: -50px;
+    width: calc(100% - 40px);
+    transform: translateY(0);
+    color: var(--color-neutral-100);
+    box-shadow: none;
+    text-shadow: 0 1px 2px var(--color-neutral-25);
+    transition: all 0.3s ease-in;
+
+    @media (max-width: map-get($breakpoints, 'medium')) {
+        top: 100%;   
+    }
+
+    &.show {
+        opacity: 1;
+        transform: translateY(60px);
+        height: 100%;
+        max-height: 50px;
+        box-shadow: 0 1px 2px var(--app-text-secondary);
+
+        @media (max-width: map-get($breakpoints, 'medium')) {
+            transform: translateY(-90px);   
+        }
+    }
+}

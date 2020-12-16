@@ -1,0 +1,25 @@
+/* jquery */
+.ui-datepicker {
+    background: var(--app-bg-color-secondary);
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    padding: 0.5em;
+
+    .ui-datepicker-prev::before, .ui-datepicker-next::before {
+        display: block;
+        color: var(--app-text-primary);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+    }
+
+    .ui-datepicker-next::before {
+        content: '>';
+        left: 50%;
+    }
+    .ui-datepicker-prev::before {
+        content: '<';
+        right: 50%;
+    }
+}
