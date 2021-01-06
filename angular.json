@@ -38,8 +38,8 @@
                 "output": "icons"
               }
             ],
-            "styles": ["apps/web/src/styles.scss"],
-            "scripts": []
+            "styles": ["apps/web/src/styles.scss", "apps/web/src/css/datepicker.scss"],
+            "scripts": ["node_modules/jquery/dist/jquery.min.js", "node_modules/jquery-ui/ui/widgets/datepicker.js"]
           },
           "configurations": {
             "production": {

@@ -3,7 +3,7 @@
     <div class="card">
         <div class="form-group">
             <label for="title">Task Name<sup>*</sup></label>
-            <input type="text" name="title" #name required class="form-control" [(ngModel)]="task.title">
+            <input type="text" name="title" #name required class="form-group" [(ngModel)]="task.title">
         </div>
         <div class="form-group">
             <label for="thumb">Thumbnail</label>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="description" class="form-control" [(ngModel)]="task.description"></textarea>
+            <textarea name="description" class="form-group" [(ngModel)]="task.description"></textarea>
         </div>
         <div class="form-group">
             <label for="labels">Labels</label>
@@ -37,7 +37,7 @@
             <label for="dueDate">Due Date</label>
             <div class="date-container">
                 <tdn-ui-icon name="calendar" size="m"></tdn-ui-icon>
-                <input type="text" class="form-control" name="dueDate" id="dueDate" [(ngModel)]="formattedDate">
+                <input type="text" class="form-group" name="dueDate" id="dueDate" [(ngModel)]="formattedDate">
             </div>
         </div>
         <div class="form-group">
