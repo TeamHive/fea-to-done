@@ -2,25 +2,25 @@
     <nxlp-header [task]="task" (changeTask)="completeTask($event)"></nxlp-header>
     <div class="container">
         <div class="task card">
-            <div class="form-control" *ngIf="task.img">
+            <div class="form-group" *ngIf="task.img">
                 <label>Thumbnail</label>
                 <div class="thumbnail" [style]="'background-image:url('+task.img+')'"></div>
             </div>
-            <div class="form-control" *ngIf="task.tags.length">
-                <label>Tags</label>
+            <div class="form-group" *ngIf="task.description">
+                <label>Description</label>
+                <p *ngIf="task.description">{{task.description}}</p>
+            </div>
+            <div class="form-group" *ngIf="task.tags.length">
+                <label>Labels</label>
                 <ul class="tags" *ngIf="task.tags">
                     <li *ngFor="let tag of task.tags"><span [class]="'tag bg-color-'+tag.color">{{tag.label}}</span></li>
                 </ul>
             </div>
-            <div class="form-control" *ngIf="task.description">
-                <label>Description</label>
-                <p *ngIf="task.description">{{task.description}}</p>
-            </div>
-            <div class="form-control" *ngIf="task.due">
+            <div class="form-group" *ngIf="task.due">
                 <label>Due Date</label>
                 <p class="date"><tdn-ui-icon name="calendar" size="m"></tdn-ui-icon>{{task.due | date:'M/d/yyyy'}}</p>
             </div>
-            <div class="form-control" *ngIf="task.notes">
+            <div class="form-group" *ngIf="task.notes">
                 <label>Notes</label>
                 <p class="notes">{{task.notes}}</p>
             </div>
