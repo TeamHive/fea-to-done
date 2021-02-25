@@ -31,7 +31,7 @@ There are a set of things that are important to them long term that should be co
 - Supports the latest versions of Chrome and Safari, iPhone and Android
 - Code should be built in a way that is scalable so the project can easily continue to the next phase.
 - The application (pages, routing) should be handled in Angular where it makes sense
-- The visuals of the app should be built in stencil using either [web components](https://stenciljs.com/docs/component) or [functional components](https://stenciljs.com/docs/functional-components)
+- The visuals of the app would preferably be built in stencil using either [web components](https://stenciljs.com/docs/component) or [functional components](https://stenciljs.com/docs/functional-components). If narrowing your focus to implementing everything in Angular helps you deliver, that is acceptable.
 
 
 The client has provided you with the designs, style guide, and all assets needed to accomplish the task. 
